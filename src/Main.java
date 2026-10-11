@@ -88,4 +88,19 @@ MyLinkedList<Integer> list = new MyLinkedList<>();
     int[] indices = ArrayString.twoSumSorted(new int[]{1,2,4,6,8},10);
 
     System.out.println("Two-sum indices: "+Arrays.toString(indices));
+
+
+    //PART 4: LRU Cache
+    System.out.println("\n----LRU CACHE----");
+    LRUCache<Integer, String> cache = new LRUCache<>(2);
+    cache.put(1,"David");
+    cache.put(2,"Jado");
+
+    System.out.println("Key 1:" +cache.get(1));
+
+    cache.put(3,"Abigael");
+    System.out.println("Key 2:" + cache.get(2));
+    System.out.println("Key 3:" + cache.get(3));
+
+
 }
