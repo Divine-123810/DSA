@@ -1,6 +1,8 @@
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 void main() {
+
+    // PART 1
 MyLinkedList<Integer> list = new MyLinkedList<>();
 
     list.addLast(10);
@@ -39,4 +41,38 @@ MyLinkedList<Integer> list = new MyLinkedList<>();
     list.display();
 
     System.out.println("The final size:" + list.size());
+
+    // PART 2
+
+    System.out.println("------- STACK TEST---------");
+
+    MyStack<Integer> stack = new MyStack<>();
+
+    stack.push(10);
+    stack.push(20);
+    stack.push(30);
+
+    System.out.println("Top element:" + stack.peek());
+    System.out.println("Removed:" + stack.pop());
+    System.out.println("New top:" + stack.peek());
+
+    System.out.println("\n--------QUEUE TEST----------");
+
+    MyQueue<String> queue = new MyQueue<>();
+
+    queue.enqueue("Divine");
+    queue.enqueue("Alice");
+    queue.enqueue("Mico");
+
+    System.out.println("Front element:" + queue.peek());
+    System.out.println("Served:" + queue.dequeue());
+    System.out.println("New front:" + queue.peek());
+    System.out.println("Is empty?:" + queue.isEmpty());
+
+
+    System.out.println("\n----BALANCED BRACKETS TEST____");
+
+    System.out.println("{[()]}:" + BalancedBrackets.isBalanced("{[()]}"));
+    System.out.println("([)]:" + BalancedBrackets.isBalanced("([)]"));
+    System.out.println("Empty expression:" + BalancedBrackets.isBalanced(""));
 }
