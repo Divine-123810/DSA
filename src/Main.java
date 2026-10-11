@@ -2,7 +2,7 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 void main() {
 
-    // PART 1
+    // PART 1:LinkedList
 MyLinkedList<Integer> list = new MyLinkedList<>();
 
     list.addLast(10);
@@ -42,7 +42,7 @@ MyLinkedList<Integer> list = new MyLinkedList<>();
 
     System.out.println("The final size:" + list.size());
 
-    // PART 2
+    // PART 2:Stack and Queue
 
     System.out.println("------- STACK TEST---------");
 
@@ -75,4 +75,17 @@ MyLinkedList<Integer> list = new MyLinkedList<>();
     System.out.println("{[()]}:" + BalancedBrackets.isBalanced("{[()]}"));
     System.out.println("([)]:" + BalancedBrackets.isBalanced("([)]"));
     System.out.println("Empty expression:" + BalancedBrackets.isBalanced(""));
+
+    //PART 3:Arrays and Strings.
+    System.out.println("\n------ARRAYS AND STRINGS------");
+
+    int[] numbers={1,2,3,4,5};
+    ArrayString.rotateRight(numbers,2);
+    System.out.println("Rotated: " + Arrays.toString(numbers));
+
+    System.out.println("Anagram: " +ArrayString.isAnagram("listen", "silent"));
+
+    int[] indices = ArrayString.twoSumSorted(new int[]{1,2,4,6,8},10);
+
+    System.out.println("Two-sum indices: "+Arrays.toString(indices));
 }
